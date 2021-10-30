@@ -106,6 +106,7 @@ render () {
         </div>
         <div className="divstyle1">
           {coin}
+          <h1>COIN</h1>
         </div>
         </div>
        
