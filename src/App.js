@@ -214,6 +214,7 @@ handleSubmit = async (e) => {
        }
 
   render () {
+    console.log(this.state.cryptos)
   return (
     <div>
       <div className="modal">
@@ -223,7 +224,24 @@ handleSubmit = async (e) => {
       <div className="App">
       {/* <Nav loginUser={this.loginUser} signup={this.signup}/> */}
         <h1 className="Title">My Coin Tracker</h1>
-       
+        <table className="Table">
+            <tbody>
+              { this.state.cryptos.map((crypto, i) => {
+                  return (
+                    <tr className="divstyle2"key={crypto._id}>
+                    <td onClick={() => this.toggleFavorite(crypto)}
+                     className={ crypto.favorite ? 'favorite' : null }>
+                     { crypto.coinName }
+                    </td>
+                    <td className="pencil" onClick={() => { this.showEditForm(crypto)}}>✏️</td>
+                    <td className="delete" onClick={() => this.deleteCrypto(crypto._id)}>X</td>
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+
+          </table>   
         <Coins />
       </div>
       
@@ -247,7 +265,7 @@ handleSubmit = async (e) => {
 
           </table>
           <br/>
-          {
+          {/* {
             this.state.modalOpen &&
                    <form className="editfrm"onSubmit={this.handleSubmit}>
                    <label>Name: </label>
@@ -257,7 +275,7 @@ handleSubmit = async (e) => {
                   <button className="button-primary">submit</button>
                  </form>
           }
- 
+  */}
     </div>
   )
 }
