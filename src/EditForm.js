@@ -4,7 +4,7 @@ export default class EditForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            modalOpen: false,
+            modalOpen: true,
         }
     }
 

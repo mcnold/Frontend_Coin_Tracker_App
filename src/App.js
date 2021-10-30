@@ -249,9 +249,10 @@ handleSubmit = async (e) => {
                 })
               }
             </tbody>
+            <EditForm Edit={this.showEditForm}/>
 
           </table>
-          <EditForm Edit={this.showEditForm}/>
+          
           {/* <br/> */}
           {/* {
             this.state.modalOpen &&
