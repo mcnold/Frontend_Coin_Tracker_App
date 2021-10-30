@@ -22,7 +22,7 @@ export default class EditForm extends Component {
             <>
                 {
                 this.state.modalOpen &&
-                   <form className="editfrm"onSubmit={this.handleSubmit}>
+                   <form onSubmit={this.handleSubmit}>
                    <label>Name: </label>
                    <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
                    <label>Price: </label>

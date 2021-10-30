@@ -220,7 +220,8 @@ handleSubmit = async (e) => {
 
  
   return (
-    <div>
+    <React.Fragment>
+
       <div className="modal">
         <ExampleApp getCryptos={this.getCryptos}/>
         <button onClick={this.destroySession}>sign out.</button>
@@ -247,26 +248,17 @@ handleSubmit = async (e) => {
                     </tr>
                   )
                 })
-              },
-               {
-            this.state.modalOpen &&
-                   <form className="editfrm"onSubmit={this.handleSubmit}>
-                   <label>Name: </label>
-                   <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
-                   <label>Price: </label>
-                   <input name="coinPrice" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinPrice}/> <br/>
-                  <button className="button-primary">submit</button>
-                 </form>
-          }
+              }
+             
             </tbody>
             {/* <EditForm Edit={this.showEditForm}/> */}
 
           </table>
           
-          {/* <br/> */}
-          {/* {
-            this.state.modalOpen &&
-                   <form className="editfrm"onSubmit={this.handleSubmit}>
+          <br/>
+          {
+            // this.state.modalOpen &&
+                   <form onSubmit={this.handleSubmit}>
                    <label>Name: </label>
                    <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
                    <label>Price: </label>
@@ -274,8 +266,9 @@ handleSubmit = async (e) => {
                   <button className="button-primary">submit</button>
                  </form>
           }
-  */}
-    </div>
+ 
+  
+    </React.Fragment>
   )
 }
 }
