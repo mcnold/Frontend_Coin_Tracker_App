@@ -103,11 +103,13 @@ render () {
         />
 
         </form>
+        <h1>COIN</h1>
+        {coin}
         </div>
-        <div className="divstyle1">
+        {/* <div className="divstyle1">
           {coin}
           <h1>COIN</h1>
-        </div>
+        </div> */}
         </div>
        
         
