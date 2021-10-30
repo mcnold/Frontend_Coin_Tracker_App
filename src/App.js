@@ -247,9 +247,19 @@ handleSubmit = async (e) => {
                     </tr>
                   )
                 })
-              }
+              },
+               {
+            this.state.modalOpen &&
+                   <form className="editfrm"onSubmit={this.handleSubmit}>
+                   <label>Name: </label>
+                   <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
+                   <label>Price: </label>
+                   <input name="coinPrice" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinPrice}/> <br/>
+                  <button className="button-primary">submit</button>
+                 </form>
+          }
             </tbody>
-            <EditForm Edit={this.showEditForm}/>
+            {/* <EditForm Edit={this.showEditForm}/> */}
 
           </table>
           
