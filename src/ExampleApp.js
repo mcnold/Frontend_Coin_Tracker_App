@@ -42,7 +42,7 @@ export default class ExampleApp extends Component {
         console.log("BODY: ",response.body)
   
         if (response.status === 200) {
-          this.cryptos()
+          this.props.getCryptos()
           
         }
       }
@@ -67,7 +67,7 @@ export default class ExampleApp extends Component {
           }
         })
         if (response.status === 200) {
-          this.getCryptos()
+          this.props.getCryptos()
           console.log(200)
         }
       }

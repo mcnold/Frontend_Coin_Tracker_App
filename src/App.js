@@ -217,7 +217,7 @@ handleSubmit = async (e) => {
   return (
     <div>
       <div className="modal">
-        <ExampleApp />
+        <ExampleApp getCryptos={this.getCryptos}/>
         <button onClick={this.destroySession}>sign out.</button>
       </div>
       <div className="App">
