@@ -74,7 +74,12 @@ handleChange = (event) => {
 //   }
 
 render () {
+    let coin;
     console.log(this.state.coinObject)
+    if(Object.keys(this.state.coinObject).length) {
+      coin = <Coin coinObject={this.state.coinObject} coinName={this.state.coinName}/>
+    }
+    console.log(coin)
     return(
         <>
         <div className="App">
@@ -98,9 +103,7 @@ render () {
         </form>
         </div>
         <div className="divstyle1">
-        {this.state.coinObject &&
-        <Coin coinObject={this.state.coinObject} coinName={this.state.coinName}/>
-        }
+          {coin}
         </div>
         </div>
        
