@@ -226,7 +226,7 @@ handleSubmit = async (e) => {
        
         <Coins />
       </div>
-      <div className="u-pull-right">
+      
         <NewForm baseUrl={baseUrl} addCrypto={ this.addCrypto }/>
         <table className="Table">
             <tbody>
@@ -257,7 +257,7 @@ handleSubmit = async (e) => {
                   <button className="button-primary">submit</button>
                  </form>
           }
-        </div>
+ 
     </div>
   )
 }
