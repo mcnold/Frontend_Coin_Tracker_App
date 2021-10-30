@@ -3,7 +3,7 @@ import ReactModal from 'react-modal'
 // import { ReactDOM } from 'react-dom'
 import Nav from './Nav'
 
-let baseUrl = 'http://localhost:4000'
+let baseUrl = process.env.REACT_APP_BASEURL
 
 export default class ExampleApp extends Component {
     constructor(props) {
