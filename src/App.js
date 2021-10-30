@@ -7,6 +7,7 @@ import NewForm from './NewForm';
 // import ReactDOM from 'react-dom';
 // import Modal from 'react-modal'
 import ExampleApp from './ExampleApp';
+import EditForm from './EditForm'
 
 //backend url port
 let baseUrl = process.env.REACT_APP_BASEURL;
@@ -227,27 +228,7 @@ handleSubmit = async (e) => {
       <div>
       {/* <Nav loginUser={this.loginUser} signup={this.signup}/> */}
         <h1 className="Title">My Coin Tracker</h1>
-        <div>
-          <h1>Table</h1>
-        <table>
-            <tbody>
-              { this.state.cryptos.map((crypto, i) => {
-                  return (
-                    <tr key={crypto._id}>
-                    <td onClick={() => this.toggleFavorite(crypto)}
-                     className={ crypto.favorite ? 'favorite' : null }>
-                     { crypto.coinName }
-                    </td>
-                    <td className="pencil" onClick={() => { this.showEditForm(crypto)}}>✏️</td>
-                    <td className="delete" onClick={() => this.deleteCrypto(crypto._id)}>X</td>
-                    </tr>
-                  )
-                })
-              }
-            </tbody>
-
-          </table>  
-          </div> 
+        
         <Coins />
       </div>
       
@@ -270,7 +251,8 @@ handleSubmit = async (e) => {
             </tbody>
 
           </table>
-          <br/>
+          <EditForm Edit={this.showEditForm}/>
+          {/* <br/> */}
           {/* {
             this.state.modalOpen &&
                    <form className="editfrm"onSubmit={this.handleSubmit}>
