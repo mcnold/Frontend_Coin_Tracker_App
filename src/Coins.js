@@ -103,7 +103,6 @@ render () {
         />
 
         </form>
-        <h1>COIN</h1>
         {coin}
         </div>
         {/* <div className="divstyle1">
