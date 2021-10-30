@@ -257,7 +257,7 @@ handleSubmit = async (e) => {
           
           <br/>
           {
-            // this.state.modalOpen &&
+             this.state.modalOpen &&
                    <form onSubmit={this.handleSubmit}>
                    <label>Name: </label>
                    <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
