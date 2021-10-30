@@ -9,7 +9,7 @@ import NewForm from './NewForm';
 import ExampleApp from './ExampleApp';
 
 //backend url port
-let baseUrl = 'http://localhost:4000'
+let baseUrl = process.env.REACT_APP_BASEURL;
 
 class App extends Component {
   constructor(props) {
