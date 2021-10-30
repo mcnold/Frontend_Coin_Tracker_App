@@ -98,7 +98,7 @@ render () {
         </form>
         </div>
         <div className="divstyle1">
-        {Object.keys(this.state.coinObject).length>0 &&
+        {this.state.coinObject &&
         <Coin coinObject={this.state.coinObject} coinName={this.state.coinName}/>
         }
         </div>
