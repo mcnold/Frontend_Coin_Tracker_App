@@ -48,6 +48,7 @@ handleChange = (event) => {
          return response.json()
         }).then(json => {
             console.log(json)
+            console.log("HERE")
             this.setState({
             coinObject: json[this.state.coinName],
         })},
