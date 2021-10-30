@@ -78,6 +78,7 @@ render () {
     let coin;
     console.log(this.state.coinObject)
     if(Object.keys(this.state.coinObject).length) {
+      console.log("IF statement working")
       coin = <Coin coinObject={this.state.coinObject} coinName={this.state.coinName}/>
     }
     console.log(coin)
