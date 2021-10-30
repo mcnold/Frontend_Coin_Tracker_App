@@ -215,20 +215,25 @@ handleSubmit = async (e) => {
 
   render () {
     console.log(this.state.cryptos)
+
+
+ 
   return (
     <div>
       <div className="modal">
         <ExampleApp getCryptos={this.getCryptos}/>
         <button onClick={this.destroySession}>sign out.</button>
       </div>
-      <div className="App">
+      <div>
       {/* <Nav loginUser={this.loginUser} signup={this.signup}/> */}
         <h1 className="Title">My Coin Tracker</h1>
-        <table className="Table">
+        <div>
+          <h1>Table</h1>
+        <table>
             <tbody>
               { this.state.cryptos.map((crypto, i) => {
                   return (
-                    <tr className="divstyle2"key={crypto._id}>
+                    <tr key={crypto._id}>
                     <td onClick={() => this.toggleFavorite(crypto)}
                      className={ crypto.favorite ? 'favorite' : null }>
                      { crypto.coinName }
@@ -241,16 +246,17 @@ handleSubmit = async (e) => {
               }
             </tbody>
 
-          </table>   
+          </table>  
+          </div> 
         <Coins />
       </div>
       
         <NewForm baseUrl={baseUrl} addCrypto={ this.addCrypto }/>
-        <table className="Table">
+        <table>
             <tbody>
               { this.state.cryptos.map((crypto, i) => {
                   return (
-                    <tr className="divstyle2"key={crypto._id}>
+                    <tr key={crypto._id}>
                     <td onClick={() => this.toggleFavorite(crypto)}
                      className={ crypto.favorite ? 'favorite' : null }>
                      { crypto.coinName }
