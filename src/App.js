@@ -234,7 +234,7 @@ handleSubmit = async (e) => {
       </div>
       
         <NewForm baseUrl={baseUrl} addCrypto={ this.addCrypto }/>
-        <table>
+        <table className="u-pull-right">
             <tbody>
               { this.state.cryptos.map((crypto, i) => {
                   return (
@@ -258,7 +258,7 @@ handleSubmit = async (e) => {
           <br/>
           {
              this.state.modalOpen &&
-                   <form onSubmit={this.handleSubmit}>
+                   <form className="u-pull-right"onSubmit={this.handleSubmit}>
                    <label>Name: </label>
                    <input name="coinName" value={this.state.crypto} onChange={this.handleChange} placeholder={this.state.coinName}/> <br/>
                    <label>Price: </label>
